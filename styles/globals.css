@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Geist Sans", system-ui, sans-serif;
+  --font-ivar: var(--font-ivar-soft), serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+}
+
+@layer components {
+  .slider-thumb::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-white cursor-pointer;
+  }
+  .slider-thumb::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full bg-white cursor-pointer border-none;
+  }
+  .slider-track {
+    @apply bg-gray-700 rounded-full h-2;
+  }
+}
+
+
